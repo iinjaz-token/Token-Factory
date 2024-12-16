@@ -1,55 +1,25 @@
-## TokenFactory
-Issuing your own cryptocurrency token on the Ethereum,Binance and all EVM Blockchain with One-Click.
-Support Mintable,Pausable,Capped,Burnable,USDT and multi Function ERC20 Tokens,BEP20 token.Create Token,Generate Token Defi DAPP MultiSender
+# TokenFactory
 
-Support All the Ethereum EVM-compatible blockchains:
-You can deploy these token to any Ethereum Virtual Machine Blockchain, like: Ethereum,Binance,Polygon,Fantom,Avalanche,Thundercore,avax,Harmony,Moonriver,Ubiq,Arbitrum,Theta,Wegochain,Akroma,moonriver,Moonbeam,telos,cronos,celo,base,Blast...
-And you could also deploy these token to any test network,like: Ropsten,Kovan,Rinkby and Binance testnet...
+<img src="https://s2.coinmarketcap.com/static/img/coins/200x200/17379.png" alt="IINJAZ Logo" style="width:100px;">
 
- 
-<img src="website.png">
- 
+Issuing your own cryptocurrency token on the Ethereum, Binance, and all EVM-compatible blockchains with one click.
 
-Website1: https://erc20tokenfactory.netlify.app<br>
-Website2:https://CryptoDappRun.github.io/Token-Factory/<br>
+This project is proudly built and maintained by the **IINJAZ Team**: [https://www.iinjaz-token.com/](https://www.iinjaz-token.com/)
 
+## Features
 
-Tutorial Video:<br>
-https://youtu.be/37eDqbnDKhI<br>
+- Support for **Mintable**, **Pausable**, **Capped**, **Burnable**, **USDT-like**, and multi-function ERC20/BEP20 tokens.
+- Generate DeFi DApps, multi-sender tools, and more.
+- Fully customizable for deployment on any EVM-compatible blockchain.
 
- 
+## Supported Blockchains
 
-Support network:
-https://algocryptodapp.github.io/Blockchain-To-Metamask/
+You can deploy tokens to any **Ethereum Virtual Machine (EVM) Blockchain**, such as:
 
-イーサリアムERC20トークンのワンクリック発行<br>
-การออกโทเค็น Ethereum ERC20 เพียงคลิกเดียว<br>
-以太坊/以太坊相似 ERC20代币一键发币<br>
-صدور نشانه های Ethereum ERC20 با یک کلیک
+- **Ethereum**, **Binance Smart Chain (BSC)**, **Polygon**, **Fantom**, **Avalanche**, **Arbitrum**, **Cronos**, **Harmony**, **Moonbeam**, **Celo**, **Base**, and many more.
+- Testnets such as **Goerli**, **Sepolia**, **BSC Testnet**, and others are also supported.
 
-ERC20 token
-### Support Language:
-English
-简体中文
-русский
-한국어
-日本語
-ไทย
+### Disclaimer
 
-فارسی
-
-### Need Earn cryptocurrency?
-1.Download this project,put to any web server.<br>
-2.Open js/config.js<br>
-3.Change the address to your own address,customize fee you will recieve. then start earn cryptocurrency!<br>
-
-Tips<br>
-After modifying the address, please refresh the website to visit after more than ten minutes, because the github cache or website may not have been changed, so the charging address is still the previous address.<br>
- 
-
-You can deployed this source to any server and change the brand name without my approve.
-
-
-Bee sender Token Airdop:
-https://github.com/CryptoDappRun/Bee-Sender
-
+- Unauthorized reproduction or copying of this software or any of its components is strictly prohibited.
+- Redistribution requires explicit permission from the IINJAZ Team.
