@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <!-- Meta Information -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Token Factory: Create and issue ERC20 tokens on the Ethereum blockchain with one click. A fast, easy, and reliable token generator.">
+  <meta name="keywords" content="ERC20, Token Factory, Ethereum, Blockchain, Token Creation, Smart Contracts, Crypto Token, Token Generator">
+  <meta name="author" content="Token Factory Team">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Token Factory - Issue Your Own Ethereum Tokens with One Click">
+  <meta property="og:description" content="Create ERC20 tokens easily on the Ethereum blockchain. Fast, secure, and efficient token generation for developers and crypto projects.">
+  <meta property="og:image" content="https://s2.coinmarketcap.com/static/img/coins/200x200/17379.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://example.com/token-factory">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Token Factory - Issue Ethereum Tokens with One Click">
+  <meta name="twitter:description" content="Easily create ERC20 tokens on Ethereum. Fast, easy, and reliable platform for token generation.">
+  <meta name="twitter:image" content="https://s2.coinmarketcap.com/static/img/coins/200x200/17379.png">
 
-  <!-- Bootstrap  -->
-  <!-- Token Factory 2.0 -->
+  <!-- Favicon -->
+  <link rel="icon" href="https://s2.coinmarketcap.com/static/img/coins/200x200/17379.png" type="image/png">
+
+  <!-- Page Title -->
+  <title>Token Factory - Issue Your Own Ethereum Tokens with One Click</title>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="js/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
 
-  <title> Token Factory- Issuing your own token on the Ethereum with one click</title>
+  <!-- Scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/sweetAlert.js"></script>
   <script src="js/web3.min.js"></script>
@@ -31,8 +52,8 @@
         'Permit Token': 'Permit Token',
         'Votes Token': 'Votes Token',
 
-        'Name': 'Token Name(For example: Tesla)',
-        'Symbol': 'Token Symbol(For example: TSLA)',
+        'Name': 'Token Name(For example: IINJAZ)',
+        'Symbol': 'Token Symbol(For example: IJZ)',
         'Decimals': 'Decimals(If you don’t know what this is, please fill in: 18)',
         'SupplyAmount': 'Supply Amount(For example: 10000000)',
         'InitSupplyAmount': 'Init Supply Amount(For example: 2000000000000)',
@@ -115,8 +136,8 @@
 
 
     .l-bg-blue-dark {
-      background: linear-gradient(to right, rgb(165, 180, 252), rgb(192, 132, 252));
-      color: #fff;
+      background: linear-gradient(to right, rgb(123, 143, 244), rgb(0, 22, 148));
+      color: #3a3a3a;
     }
 
     .wfiedls {
@@ -252,14 +273,17 @@
 
 <body class="text-secondary font-weight-light l-bg-blue-dark">
 
-  <header class="d-flex flex-column flex-md-row align-items-center text-dark p-3 px-md-4 mb-3 bg-white  shadow-sm">
+  <header class="d-flex justify-content-center align-items-center text-dark p-3 mb-3 bg-white shadow-sm">
+    <!-- Logo -->
+    <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/17379.png" alt="Token Factory Logo" width="60" height="60" class="mr-3">
 
-    <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-
-
-    </ul>
-
+    <!-- Center Title -->
+    <h1 class="text-center m-0" style="font-size: 1.5rem; font-weight: 600;">
+      Token Factory - Issue Your Own Ethereum Tokens with One Click<br>
+      <small class="text-muted" style="font-size: 1rem;">built by IINJAZ Team</small>
+    </h1>
   </header>
+
 
 
   </nav>
@@ -332,12 +356,12 @@
 
 
               <fieldset class="form-group NameField">
-                <label for="FloorWidthA" class="lang" key="Name">Token Name(For example: Tesla)</label>
+                <label for="FloorWidthA" class="lang" key="Name">Token Name(For example: IINJAZ)</label>
                 <input id="name" class="form-control " type="text" />
               </fieldset>
 
               <fieldset class="form-group SymbolField">
-                <label for="FloorWidthA" class="lang" key="Symbol">Token Symbol(For example: TSLA)</label>
+                <label for="FloorWidthA" class="lang" key="Symbol">Token Symbol(For example: IJZ)</label>
                 <input id="symbol" class="form-control" type="text" />
               </fieldset>
 
