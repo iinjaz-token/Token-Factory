@@ -24,7 +24,7 @@
   <link rel="icon" href="./img/favicon.png" type="image/png">
 
   <!-- Page Title -->
-  <title>Token Factory - Issue Your Own Ethereum Tokens with One Click</title>
+  <title>Token Factory - Issue Your Own EVM Tokens with One Click</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="js/bootstrap.min.css">
@@ -46,20 +46,23 @@
 
         <!-- Logo -->
         <div class="d-flex align-items-center">
-          <img src="./img/logo.png" alt="Token Factory Logo" width="auto" height="40" class="mr-2">
+          <a href="./index.html" class="d-flex align-items-center">
+            <img src="./img/logo.png" alt="Token Factory Logo" width="auto" height="40" class="mr-2">
+          </a>
         </div>
+
 
         <!-- Desktop Navigation -->
         <nav class="d-none d-md-flex">
           <ul class="d-flex list-unstyled mb-0">
             <li class="mr-4">
-              <a href="#" class="header-link" style="color: #fff; text-decoration: none; font-size: 0.85rem;">Home</a>
+              <a href="./index.html" class="header-link" style="color: #fff; text-decoration: none; font-size: 0.85rem;">Home</a>
             </li>
             <li class="mr-4">
               <a href="./tokenfactory.html" class="header-link" style="color: #fff; text-decoration: none; font-size: 0.85rem;">Generate EVM Tokens</a>
             </li>
             <li>
-              <a href="#" class="header-link" style="color: #fff; text-decoration: none; font-size: 0.85rem;">Generate SPL Tokens (comming Soon)</a>
+              <a href="./SPLfactory.html" class="header-link" style="color: #fff; text-decoration: none; font-size: 0.85rem;">Generate SPL Tokens (comming Soon)</a>
             </li>
           </ul>
         </nav>
@@ -222,6 +225,72 @@
       });
     </script>
     <script src="./main.js"></script>
+
 </body>
+<!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Logo and Branding -->
+      <div class="col-md-4 d-flex flex-column align-items-start mb-3 mb-md-0">
+        <img src="./img/logo.png" alt="Token Factory Logo" height="40" class="mb-2">
+        <span style="font-size: 0.9rem;">Built by
+          <a href="https://www.iinjaz-token.com/" target="_blank" class="text-white font-weight-bold">IINJAZ Token Team</a>
+        </span>
+      </div>
+
+      <!-- Copyright -->
+      <div class="col-md-4 text-center text-md-center">
+        <small class="text-muted">&copy; 2024 All Rights Reserved.</small>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item mr-3">
+            <a href="./index.html" class="footer-link text-white" style="font-size: 0.6rem; text-decoration: none;">Home</a>
+          </li>
+          <li class="list-inline-item mr-3">
+            <a href="./tokenfactory.html" class="footer-link text-white" style="font-size: 0.6rem; text-decoration: none;">Generate EVM Tokens</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="./SPLfactory.html" class="footer-link text-white" style="font-size: 0.6rem; text-decoration: none;">Generate SPL Tokens (Coming Soon)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Footer Custom Styles -->
+<style>
+  footer {
+    background: rgba(33, 33, 33, 0.9);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .footer-link:hover {
+    color: gold !important;
+    transition: color 0.3s ease-in-out;
+  }
+
+  footer small {
+    font-size: 0.85rem;
+  }
+
+  /* Responsive Spacing */
+  @media (max-width: 768px) {
+    footer .col-md-4 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    footer .col-md-4:first-child {
+      align-items: center !important;
+    }
+  }
+</style>
 
 </html>
