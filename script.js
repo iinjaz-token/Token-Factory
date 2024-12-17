@@ -182,3 +182,83 @@ animationSelect.addEventListener('change', () => {
 
   setAnimationType(newAnimationType);
 });
+
+// Metamask button on header
+document.addEventListener("DOMContentLoaded", () => {
+  const connectButton = document.getElementById('connectMetaMask');
+  const disconnectButton = document.getElementById('disconnectMetaMask');
+  const networkSelector = document.getElementById('networkSelector');
+
+  let userAccount = null;
+
+  // Check MetaMask Connection on Page Load
+  async function checkMetaMaskConnection() {
+    if (window.ethereum && window.ethereum.isConnected()) {
+      const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+      if (accounts.length > 0) {
+        userAccount = accounts[0];
+        setConnectedState();
+      }
+    }
+  }
+
+  // Connect to MetaMask
+  connectButton.addEventListener('click', async () => {
+    if (window.ethereum) {
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        userAccount = accounts[0];
+        setConnectedState();
+      } catch (error) {
+        console.error('Error connecting to MetaMask:', error);
+        alert('Failed to connect. Please try again.');
+      }
+    } else {
+      alert('MetaMask is not installed. Redirecting to MetaMask website.');
+      window.open('https://metamask.io/download.html', '_blank');
+    }
+  });
+
+  // Disconnect MetaMask
+  disconnectButton.addEventListener('click', () => {
+    userAccount = null;
+    setDisconnectedState();
+    alert('Disconnected from MetaMask.');
+  });
+
+  // Change Network
+  networkSelector.addEventListener('change', async () => {
+    const selectedNetwork = networkSelector.value;
+    try {
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: selectedNetwork }]
+      });
+      alert(`Switched to network: ${networkSelector.options[networkSelector.selectedIndex].text}`);
+    } catch (error) {
+      console.error('Network switch failed:', error);
+      alert('Failed to switch network.');
+    }
+  });
+
+  // Set UI for Connected State
+  function setConnectedState() {
+    connectButton.textContent = `Connected: ${userAccount.slice(0, 6)}...${userAccount.slice(-4)}`;
+    connectButton.disabled = true;
+    disconnectButton.classList.remove('d-none');
+    networkSelector.classList.remove('d-none');
+  }
+
+  // Set UI for Disconnected State
+  function setDisconnectedState() {
+    connectButton.textContent = 'Connect MetaMask';
+    connectButton.disabled = false;
+    disconnectButton.classList.add('d-none');
+    networkSelector.classList.add('d-none');
+  }
+
+  // On Page Load
+  checkMetaMaskConnection();
+});
+
+// end of Metamask button on header

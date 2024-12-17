@@ -35,62 +35,6 @@
   <script src="js/sweetAlert.js"></script>
   <script src="js/web3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    var arrLang = {
-      'en': {
-        'SiteTitle': 'Token Factory-Issuing your own token on the Ethereum with One-Click',
-        'typeOfToken': 'Type OF Token',
-
-        'Fix Token': 'ERC20 Fixed Amount Token',
-        'Burnable Token': 'ERC20 Burnable Token',
-        'Mintable Token': 'ERC20 Mintable Token',
-        'Pausable Token': 'ERC20 Pausable Token',
-        'Full Function Token': 'ERC20 Multi Function Token',
-        'FlashMint Token': 'ERC20 FlashMint Token',
-        'Permit Token': 'Permit Token',
-        'Votes Token': 'Votes Token',
-
-        'Name': 'Token Name(For example: IINJAZ)',
-        'Symbol': 'Token Symbol(For example: IJZ)',
-        'Decimals': 'Decimals(If you don’t know what this is, please fill in: 18)',
-        'SupplyAmount': 'Supply Amount(For example: 10000000)',
-        'InitSupplyAmount': 'Init Supply Amount(For example: 2000000000000)',
-        'AdminAddress': 'Administrator Address',
-        'FixedDesKey': 'You can issue a fixed amount of erc20 tokens with one-click.',
-        'BurnableDesKey': 'You can issue a destroyable erc20 token with one-click',
-        'MintableDesKey': 'You can issue mintable erc20 tokens with one-click, and mint tokens for specified addresses at any time.',
-        'PausableDesKey': 'You can one-click to issue erc20 tokens that can be suspended.',
-        'MultiFunctionDesKey': 'You can one-click to issue erc20 tokens that can be suspended, minted, and can be destroyed.',
-        'FlashMintDesKey': "Built-in flash loans. Lend tokens without requiring collateral as long as they're returned in the same transaction.",
-        'PermitDesKey': "Keeps track of historical balances for voting in on-chain governance, with a way to delegate one's voting power to a trusted account.",
-        'VotesDesKey': "Without paying gas, token holders will be able to allow third parties to transfer from their account.",
-        'FormTipsKey': 'Please fill the form completely'
-      }
-
-    };
-
-    // Process translation
-    $(function() {
-      $('.translate').click(function() {
-        var lang = $(this).attr('id');
-
-        $('.lang').each(function(index, item) {
-          $(this).text(arrLang[lang][$(this).attr('key')]);
-        });
-      });
-    });
-
-
-    var usrlang = 'en';
-    usrlang = navigator.language || navigator.userLanguage;
-    console.log("User's preferred language is: ", usrlang);
-
-    var lang = usrlang;
-
-    $('.lang').each(function(index, item) {
-      $(this).text(arrLang[lang][$(this).attr('key')]);
-    });
-  </script>
   <link href="pricing.css" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -99,14 +43,30 @@
   <header class="d-flex justify-content-between align-items-center p-3 shadow-sm" style="background-color: #212121; color: #fff;">
 
     <!-- Logo and Title -->
+    <!-- Logo and Title -->
     <div class="d-flex align-items-center">
-      <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/17379.png" alt="Token Factory Logo" width="120" height="120" class="mr-3">
+      <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/17379.png" alt="Token Factory Logo" width="50" height="50" class="mr-2">
       <div>
-        <h1 class="m-0" style="font-size: 1.2rem; font-weight: 600;">
+        <h1 class="m-0" style="font-size: 1.2rem; font-weight: 600; color: #fff;">
           Token Factory - Issue Your Own Ethereum Tokens with One Click
         </h1>
         <small class="text-muted" style="font-size: 0.8rem; color: #ccc;">Built by IINJAZ Team</small>
       </div>
+    </div>
+
+    <!-- MetaMask Buttons on Right -->
+    <div class="d-flex align-items-center">
+      <select id="networkSelector" class="form-control mr-2" style="width: auto; display: none;">
+        <option value="0x1">Ethereum Mainnet</option>
+        <option value="0x3">Ropsten Testnet</option>
+        <option value="0x4">Rinkeby Testnet</option>
+        <option value="0x38">Binance Smart Chain</option>
+        <option value="0x89">Polygon Mainnet</option>
+      </select>
+      <button id="connectMetaMask" class="btn btn-outline-light d-flex align-items-center mr-2">
+        <img src="https://images.ctfassets.net/9sy2a0egs6zh/2qy1wS5MmZOXkXn9yFlGJp/f3797a512c283e6f71450abd408b7452/mm-logo-white.svg" alt="MetaMask Logo" width="200" height="30" class="mr-2">
+      </button>
+      <button id="disconnectMetaMask" class="btn btn-danger d-none">Disconnect</button>
     </div>
   </header>
   </nav>
@@ -227,4 +187,5 @@
     </script>
     <script src="./main.js"></script>
 </body>
+
 </html>
